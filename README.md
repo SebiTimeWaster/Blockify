@@ -2,7 +2,7 @@
 
 A Spigot/~~Paper~~ plugin implementing a Hopper that blockifies items.
 
-Paper has multiple bugs in an inventory implementation, doesn't work.
+Paper has a bug in an inventory implementation, doesn't work at the moment. Bug report is opened.
 
 ## What it does
 
