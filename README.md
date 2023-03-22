@@ -18,7 +18,7 @@ Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the ap
 
 Copy [Blockify](target/Blockify-1.0.0-1.17%2B.jar) into the `/plugin` directory of your Spigot or Paper server.
 
-`Blockify 1.0.0` supports Minecraft versions `1.17` and above. Tested with `Minecraft 1.19.3`.
+`Blockify 1.0.0` supports Minecraft versions `1.17` and above.
 
 ## What items are blockified?
 
