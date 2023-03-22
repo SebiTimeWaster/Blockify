@@ -18,7 +18,7 @@ Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the ap
 
 ## Installation
 
-Copy [Blockify](target/Blockify-1.0.0.jar 'Download') into the `/plugin` directory of your Spigot or ~~Paper~~ server.
+Copy <a id="raw-url" href="target/Blockify-1.0.0.jar">Blockify</> into the `/plugin` directory of your Spigot or ~~Paper~~ server.
 
 `Blockify 1.0.0` supports Minecraft versions `1.19.3` and above.
 
