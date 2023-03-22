@@ -4,22 +4,24 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.block.Hopper;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryMoveItemEvent;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.ShapedRecipe;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.NamespacedKey;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.block.Block;
+import org.bukkit.block.Hopper;
+import org.bukkit.Bukkit;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.inventory.InventoryMoveItemEvent;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.Listener;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.recipe.CraftingBookCategory;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public class App extends JavaPlugin implements Listener {
     @Override
@@ -77,6 +79,7 @@ public class App extends JavaPlugin implements Listener {
         // create crafting recipe
         NamespacedKey recipeName = new NamespacedKey(this, "Blockifier");
         ShapedRecipe recipe = new ShapedRecipe(recipeName, blockifier);
+        recipe.setCategory(CraftingBookCategory.REDSTONE);
         recipe.shape("IGR", "EHE", "RGI");
         recipe.setIngredient('I', Material.IRON_BLOCK);
         recipe.setIngredient('G', Material.GOLD_BLOCK);

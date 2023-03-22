@@ -1,10 +1,12 @@
 # Blockify
 
-A Spigot/Paper plugin implementing a Hopper that blockifies items.
+A Spigot/~~Paper~~ plugin implementing a Hopper that blockifies items.
+
+Paper has multiple bugs in an inventory implementation, doesn't work.
 
 ## What it does
 
-This Spigot/Paper plugin implements a new Hopper type called Blockifier, which holds back items that have a block form until enough items are collected to create the block. Once the required number of items are collected, the block is then created and pushed into the destination block (Chest, Hopper, etc.).
+This Spigot/~~Paper~~ plugin implements a new Hopper type called Blockifier, which holds back items that have a block form until enough items are collected to create the block. Once the required number of items are collected, the block is then created and pushed into the destination block (Chest, Hopper, etc.).
 
 Since blockable items are held back if there aren't enough present, it is possible to clog Blockifier until it cannot pull new items. Therefore, it is recommended to use Blockifier after a sorter.
 
@@ -16,9 +18,9 @@ Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the ap
 
 ## Installation
 
-Copy [Blockify](target/Blockify-1.0.0-1.17%2B.jar) into the `/plugin` directory of your Spigot or Paper server.
+Copy [Blockify](target/Blockify-1.0.0.jar 'Download') into the `/plugin` directory of your Spigot or ~~Paper~~ server.
 
-`Blockify 1.0.0` supports Minecraft versions `1.17` and above.
+`Blockify 1.0.0` supports Minecraft versions `1.19.3` and above.
 
 ## What items are blockified?
 
