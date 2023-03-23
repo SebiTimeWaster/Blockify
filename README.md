@@ -1,20 +1,22 @@
 # Blockify
 
-A Spigot/~~Paper~~ plugin implementing a Hopper that blockifies items.
+A Spigot/~~Paper~~ plugin implementing a Hopper that turns items into their "Block of ..." form.
 
 Paper has a bug in an inventory implementation, doesn't work at the moment. Bug report is opened.
 
 ## What it does
 
-This Spigot/~~Paper~~ plugin implements a new Hopper type called Blockifier, which holds back items that have a block form until enough items are collected to create the block. Once the required number of items are collected, the block is then created and pushed into the destination block (Chest, Hopper, etc.).
+This Spigot/~~Paper~~ plugin implements a new Hopper type called Blockifier, which for instance turns 9 "Iron Ingots" into 1 "Block of Iron" (A complete list of conversions possible is below).
 
-Since blockable items are held back if there aren't enough present, it is possible to clog Blockifier until it cannot pull new items. Therefore, it is recommended to use Blockifier after a sorter.
+Blockifier holds back items that have a block form until enough items are collected to create the block. Once the required number of items are collected, the block is then created and pushed into the destination Chest, Hopper, Dropper, etc.
+
+Since items that have a block form are held back if there aren't enough present, it is possible to clog Blockifier until it cannot pull new items. Therefore, it is recommended to use Blockifier after a sorter.
 
 Here is Blockifier's crafting recipe:
 
 ![Blockifier Recipe](recipe.png 'Blockifier Recipe')
 
-Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the appearance of a block. When you interact with Blockifier the name will be "Blockifier" and not "Item Hopper".
+Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the appearance of a placed block. When you interact with Blockifier the name will be "Blockifier" and not "Item Hopper".
 
 ## Installation
 
@@ -26,7 +28,7 @@ Copy [Blockify](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Block
 
 Criteria used to select what conversions are allowed:
 
--   The resulting block needs to be of the same type of material, so no material conversions
+-   The resulting block form needs to be of the same type of material (I.e. Iron -> Iron)
 -   The blockifying must be doable by a player with a crafting table
 
 This is a list of all conversions Blockifier does:
@@ -60,6 +62,6 @@ This is a list of all conversions Blockifier does:
 | SNOWBALL          |   4    | SNOW_BLOCK        |
 | WHEAT             |   9    | HAY_BLOCK         |
 
-These conversions are only performed when the Hopper is pointing to a target block that is a BARREL, CHEST, DISPENSER, DROPPER, HOPPER, or a SHULKER_BOX, but not if any other block is the target or a player interacts with the inventory of Blockifier.
+These conversions are only performed when the Hopper is pointing to a target that is a BARREL, CHEST, DISPENSER, DROPPER, HOPPER, or a SHULKER_BOX, but not if any other block is the target or a player interacts with the inventory of Blockifier.
 
 Items that are not in this list are transported like it is a normal Hopper.
