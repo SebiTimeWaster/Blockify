@@ -1,8 +1,10 @@
 # Blockify
 
+![](logo.png 'Blockifier Logo')
+
 A Spigot/~~Paper~~ plugin implementing a Hopper that turns items into their "Block of ..." form.
 
-Paper has a bug in an inventory implementation, doesn't work at the moment. Bug report is opened.
+Paper has a bug in an inventory implementation, it doesn't work on Paper at the moment. Bug report is opened.
 
 ## What it does
 
