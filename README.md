@@ -22,9 +22,11 @@ Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the ap
 
 ## Installation
 
-Copy [Blockify](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Blockify_1.0.1-MC_1.19.3+.jar) into the `/plugin` directory of your Spigot or ~~Paper~~ server and restart it.
+Copy [Blockify 1.0.1](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Blockify_1.0.1-MC_1.19.3+.jar) into the `/plugin` directory of your Spigot or ~~Paper~~ server and restart it.
 
-`Blockify 1.0.1` supports Minecraft versions `1.19.3` and above.
+### Compatibility
+
+[Blockify 1.0.1](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Blockify_1.0.1-MC_1.19.3+.jar) supports [Minecraft 1.19.3](https://minecraft.fandom.com/wiki/Java_Edition_1.19.3) and above.
 
 ## What items are blockified?
 
@@ -68,3 +70,17 @@ This is a list of all compressions Blockifier does:
 These compressions are only performed when the Hopper is pointing to a target that is a BARREL, CHEST, DISPENSER, DROPPER, HOPPER, or a SHULKER_BOX, but not if any other block is the target or a player interacts with the inventory of Blockifier.
 
 Items that are not in this list are transported like it is a normal Hopper.
+
+## Version history
+
+v1.0.1 - Minor additions
+
+-   Added missing HONEYCOMB compression
+-   Better readme descriptions
+-   Added version history
+
+v1.0.0 - Initial version
+
+-   Material compressions for 26 materials
+-   Crafting recipe for Blockifier
+-   Custom name for Blockifier
