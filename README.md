@@ -22,9 +22,9 @@ Blockifier looks like a Hopper, unfortunately Bukkit has no way to change the ap
 
 ## Installation
 
-Copy [Blockify](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Blockify-1.0.0.jar) into the `/plugin` directory of your Spigot or ~~Paper~~ server.
+Copy [Blockify](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Blockify_1.0.1-MC_1.19.3+.jar) into the `/plugin` directory of your Spigot or ~~Paper~~ server and restart it.
 
-`Blockify 1.0.0` supports Minecraft versions `1.19.3` and above.
+`Blockify 1.0.1` supports Minecraft versions `1.19.3` and above.
 
 ## What items are blockified?
 
@@ -47,6 +47,7 @@ This is a list of all conversions Blockifier does:
 | EMERALD           |   9    | EMERALD_BLOCK     |
 | GLOWSTONE_DUST    |   4    | GLOWSTONE         |
 | GOLD_INGOT        |   9    | GOLD_BLOCK        |
+| HONEYCOMB         |   4    | HONEYCOMB_BLOCK   |
 | IRON_INGOT        |   9    | IRON_BLOCK        |
 | LAPIS_LAZULI      |   9    | LAPIS_BLOCK       |
 | MELON_SLICE       |   9    | MELON             |

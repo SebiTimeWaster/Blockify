@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.timewaster.blockify</groupId>
     <artifactId>Blockify</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>Blockify</name>
     <packaging>jar</packaging>
     <properties>
@@ -30,7 +30,7 @@
     </dependencies>
     <build>
         <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
-        <finalName>${project.artifactId}-${project.version}</finalName>
+        <finalName>${project.artifactId}_${project.version}-MC_1.19.3+</finalName>
         <resources>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>

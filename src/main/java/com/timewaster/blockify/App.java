@@ -21,7 +21,6 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.event.player.PlayerJoinEvent;
 
 public class App extends JavaPlugin implements Listener {
     @Override
@@ -55,7 +54,7 @@ public class App extends JavaPlugin implements Listener {
                     // check if source inventory contains enough items of stack being moved
                     if (source.contains(stackBeingMovedMaterial, blockAmount)) {
                         source.removeItem(new ItemStack(stackBeingMovedMaterial, blockAmount));
-                        event.setItem(new ItemStack(materialConversions.get(stackBeingMovedMaterial), 1));
+                        event.setItem(new ItemStack(materialCompressions.get(stackBeingMovedMaterial), 1));
                         sourceLocation.getWorld().spawnParticle(Particle.ELECTRIC_SPARK,
                                 sourceLocation.add(0.5, 0.5, 0.5), 10);
                     } else { // if not cancel event to hold back items until enough items are available
@@ -105,6 +104,7 @@ public class App extends JavaPlugin implements Listener {
             Material.EMERALD, // 9 > EMERALD_BLOCK
             Material.GLOWSTONE_DUST, // 4 > GLOWSTONE
             Material.GOLD_INGOT, // 9 > GOLD_BLOCK
+            Material.HONEYCOMB, // 4 > HONEYCOMB_BLOCK
             Material.IRON_INGOT, // 9 > IRON_BLOCK
             Material.LAPIS_LAZULI, // 9 > LAPIS_BLOCK
             Material.MELON_SLICE, // 9 > MELON
@@ -128,6 +128,7 @@ public class App extends JavaPlugin implements Listener {
             Material.AMETHYST_SHARD,
             Material.CLAY_BALL,
             Material.GLOWSTONE_DUST,
+            Material.HONEYCOMB,
             Material.NETHER_BRICK,
             Material.POINTED_DRIPSTONE,
             Material.PRISMARINE_SHARD,
@@ -144,34 +145,35 @@ public class App extends JavaPlugin implements Listener {
             InventoryType.SHULKER_BOX);
 
     // Map of materials to convert to
-    private HashMap<Material, Material> materialConversions = new HashMap<Material, Material>();
+    private HashMap<Material, Material> materialCompressions = new HashMap<Material, Material>();
 
     private void populateMaterialMap() {
-        materialConversions.put(Material.AMETHYST_SHARD, Material.AMETHYST_BLOCK);
-        materialConversions.put(Material.BONE_MEAL, Material.BONE_BLOCK);
-        materialConversions.put(Material.CLAY_BALL, Material.CLAY);
-        materialConversions.put(Material.COAL, Material.COAL_BLOCK);
-        materialConversions.put(Material.COPPER_INGOT, Material.COPPER_BLOCK);
-        materialConversions.put(Material.DIAMOND, Material.DIAMOND_BLOCK);
-        materialConversions.put(Material.DRIED_KELP, Material.DRIED_KELP_BLOCK);
-        materialConversions.put(Material.EMERALD, Material.EMERALD_BLOCK);
-        materialConversions.put(Material.GLOWSTONE_DUST, Material.GLOWSTONE);
-        materialConversions.put(Material.GOLD_INGOT, Material.GOLD_BLOCK);
-        materialConversions.put(Material.IRON_INGOT, Material.IRON_BLOCK);
-        materialConversions.put(Material.LAPIS_LAZULI, Material.LAPIS_BLOCK);
-        materialConversions.put(Material.MELON_SLICE, Material.MELON);
-        materialConversions.put(Material.NETHER_BRICK, Material.NETHER_BRICKS);
-        materialConversions.put(Material.NETHER_WART, Material.NETHER_WART_BLOCK);
-        materialConversions.put(Material.NETHERITE_INGOT, Material.NETHERITE_BLOCK);
-        materialConversions.put(Material.POINTED_DRIPSTONE, Material.DRIPSTONE_BLOCK);
-        materialConversions.put(Material.PRISMARINE_SHARD, Material.PRISMARINE);
-        materialConversions.put(Material.QUARTZ, Material.QUARTZ_BLOCK);
-        materialConversions.put(Material.RAW_COPPER, Material.RAW_COPPER_BLOCK);
-        materialConversions.put(Material.RAW_GOLD, Material.RAW_GOLD_BLOCK);
-        materialConversions.put(Material.RAW_IRON, Material.RAW_IRON_BLOCK);
-        materialConversions.put(Material.REDSTONE, Material.REDSTONE_BLOCK);
-        materialConversions.put(Material.SLIME_BALL, Material.SLIME_BLOCK);
-        materialConversions.put(Material.SNOWBALL, Material.SNOW_BLOCK);
-        materialConversions.put(Material.WHEAT, Material.HAY_BLOCK);
+        materialCompressions.put(Material.AMETHYST_SHARD, Material.AMETHYST_BLOCK);
+        materialCompressions.put(Material.BONE_MEAL, Material.BONE_BLOCK);
+        materialCompressions.put(Material.CLAY_BALL, Material.CLAY);
+        materialCompressions.put(Material.COAL, Material.COAL_BLOCK);
+        materialCompressions.put(Material.COPPER_INGOT, Material.COPPER_BLOCK);
+        materialCompressions.put(Material.DIAMOND, Material.DIAMOND_BLOCK);
+        materialCompressions.put(Material.DRIED_KELP, Material.DRIED_KELP_BLOCK);
+        materialCompressions.put(Material.EMERALD, Material.EMERALD_BLOCK);
+        materialCompressions.put(Material.GLOWSTONE_DUST, Material.GLOWSTONE);
+        materialCompressions.put(Material.GOLD_INGOT, Material.GOLD_BLOCK);
+        materialCompressions.put(Material.HONEYCOMB, Material.HONEYCOMB_BLOCK);
+        materialCompressions.put(Material.IRON_INGOT, Material.IRON_BLOCK);
+        materialCompressions.put(Material.LAPIS_LAZULI, Material.LAPIS_BLOCK);
+        materialCompressions.put(Material.MELON_SLICE, Material.MELON);
+        materialCompressions.put(Material.NETHER_BRICK, Material.NETHER_BRICKS);
+        materialCompressions.put(Material.NETHER_WART, Material.NETHER_WART_BLOCK);
+        materialCompressions.put(Material.NETHERITE_INGOT, Material.NETHERITE_BLOCK);
+        materialCompressions.put(Material.POINTED_DRIPSTONE, Material.DRIPSTONE_BLOCK);
+        materialCompressions.put(Material.PRISMARINE_SHARD, Material.PRISMARINE);
+        materialCompressions.put(Material.QUARTZ, Material.QUARTZ_BLOCK);
+        materialCompressions.put(Material.RAW_COPPER, Material.RAW_COPPER_BLOCK);
+        materialCompressions.put(Material.RAW_GOLD, Material.RAW_GOLD_BLOCK);
+        materialCompressions.put(Material.RAW_IRON, Material.RAW_IRON_BLOCK);
+        materialCompressions.put(Material.REDSTONE, Material.REDSTONE_BLOCK);
+        materialCompressions.put(Material.SLIME_BALL, Material.SLIME_BLOCK);
+        materialCompressions.put(Material.SNOWBALL, Material.SNOW_BLOCK);
+        materialCompressions.put(Material.WHEAT, Material.HAY_BLOCK);
     }
 }
