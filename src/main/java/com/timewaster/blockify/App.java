@@ -90,9 +90,9 @@ public class App extends JavaPlugin implements Listener {
 
     // What items can be blockified
     // Criteria:
-    // - The resulting block needs to be of the same type of material, so no
-    // material conversions
-    // - The blockifying must be doable by a player with a crafting table
+    // - The resulting block form needs to be of the same type of material
+    // (I.e. Iron Ingot -> Iron Block)
+    // - The compression must be doable by a player with a crafting table
     private static final Set<Material> materialTypes = Set.of(
             Material.AMETHYST_SHARD, // 4 > AMETHYST_BLOCK
             Material.BONE_MEAL, // 9 > BONE_BLOCK

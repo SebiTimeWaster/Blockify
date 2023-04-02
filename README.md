@@ -8,7 +8,7 @@ Paper has a bug in an inventory implementation, it doesn't work on Paper at the 
 
 ## What it does
 
-This Spigot/~~Paper~~ plugin implements a new Hopper type called Blockifier, which for instance turns 9 "Iron Ingots" into 1 "Block of Iron" (A complete list of conversions possible is below).
+This Spigot/~~Paper~~ plugin implements a new Hopper type called Blockifier, which for instance turns 9 "Iron Ingots" into 1 "Block of Iron" (A complete list of compressions possible is below).
 
 Blockifier holds back items that have a block form until enough items are collected to create the block. Once the required number of items are collected, the block is then created and pushed into the destination Chest, Hopper, Dropper, etc.
 
@@ -28,12 +28,12 @@ Copy [Blockify](https://github.com/SebiTimeWaster/Blockify/raw/main/target/Block
 
 ## What items are blockified?
 
-Criteria used to select what conversions are allowed:
+Criteria used to select what compressions are allowed:
 
--   The resulting block form needs to be of the same type of material (I.e. Iron -> Iron)
--   The blockifying must be doable by a player with a crafting table
+-   The resulting block form needs to be of the same type of material (I.e. Iron Ingot -> Iron Block)
+-   The compression must be doable by a player with a crafting table
 
-This is a list of all conversions Blockifier does:
+This is a list of all compressions Blockifier does:
 
 | Source Item       | Amount | Resulting Block   |
 | ----------------- | :----: | ----------------- |
@@ -65,6 +65,6 @@ This is a list of all conversions Blockifier does:
 | SNOWBALL          |   4    | SNOW_BLOCK        |
 | WHEAT             |   9    | HAY_BLOCK         |
 
-These conversions are only performed when the Hopper is pointing to a target that is a BARREL, CHEST, DISPENSER, DROPPER, HOPPER, or a SHULKER_BOX, but not if any other block is the target or a player interacts with the inventory of Blockifier.
+These compressions are only performed when the Hopper is pointing to a target that is a BARREL, CHEST, DISPENSER, DROPPER, HOPPER, or a SHULKER_BOX, but not if any other block is the target or a player interacts with the inventory of Blockifier.
 
 Items that are not in this list are transported like it is a normal Hopper.
