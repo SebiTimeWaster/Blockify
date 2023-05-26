@@ -4,7 +4,7 @@
 
 A Spigot/~~Paper~~ plugin implementing a Hopper that turns items into their "Block of ..." form.
 
-Paper has a bug in an inventory implementation, it doesn't work on Paper at the moment. Bug report is opened.
+Paper has a [bug](https://github.com/PaperMC/Paper/issues/9028#issuecomment-1483799805) in an inventory implementation, it doesn't work on Paper at the moment. Bug report is opened.
 
 ## What it does
 
