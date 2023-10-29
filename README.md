@@ -1,5 +1,7 @@
 # Blockify
 
+! Discontinued because MC will add the Crafter block.
+
 ![](logo.png 'Blockifier Logo')
 
 A Spigot/~~Paper~~ plugin implementing a Hopper that turns items into their "Block of ..." form.
