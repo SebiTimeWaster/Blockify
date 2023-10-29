@@ -1,6 +1,6 @@
 # Blockify
 
-! Discontinued because MC will add the Crafter block.
+!!! Discontinued because MC will add the Crafter block. !!!
 
 ![](logo.png 'Blockifier Logo')
 
